@@ -1,42 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Abamat</title>
-   <link rel="stylesheet" href="style.css">
-</head>
-<body>
-   <nav id="navbar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abamat</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="navbar">
       <a href="">Abamat</a>
       <ul>
-         <li class="nav-item"><a href="">Nosotros</a></li>
-         <li><a href="" class="nav-item">Registro</a></li>
+        <li class="nav-item"><a href="">Nosotros</a></li>
+        <li><a href="" class="nav-item">Registro</a></li>
       </ul>
-   </nav>
-   <h1>Abamat</h1>
+    </nav>
+    <h1>Abamat</h1>
 
-   <h3>Bienvenidos!</h3>
+    <h3>Bienvenidos!</h3>
 
-   <p>Abamat es una empresa dedicada a la venta y distribución de materiales para la construcción.</p>
+    <p>
+      Abamat es una empresa dedicada a la venta y distribución de materiales
+      para la construcción.
+    </p>
 
-   <img src="abamat.jpg" alt="logo abamat">
+    <img src="abamat.jpg" alt="logo abamat" />
 
-   <p id="address">Estamos ubicados en: <br />
-      Calle Nuevo León 210 A, Col. Plan de Ayala Sur, C.p. 29020, Tuxtla Gutiérrez, Chiapas. </p>
-   
-   <h4>Productos</h4>
+    <p id="address">
+      Estamos ubicados en: <br />
+      Calle Nuevo León 210 A, Col. Plan de Ayala Sur, C.p. 29020, Tuxtla
+      Gutiérrez, Chiapas.
+    </p>
 
-   <button>Cemento</button>
-   <button>Acero</button>
-   <button>Ferretería</button>
+    <h4>Productos</h4>
 
-   <br />
+    <button>Cemento</button>
+    <button>Acero</button>
+    <button>Ferretería</button>
 
-   <footer>
+    <br /><br />
+
+    <select id="materiales-dropdown">
+      <option value="">Please select</option>
+      <option value="cemento">Cemento</option>
+      <option value="acero">Acero</option>
+      <option value="ferreteria">Ferretería</option>
+    </select>
+
+    <br /><br />
+
+    <textarea id="user-comment" placeholder="Enter your comment..."></textarea>
+
+    <h2>Your name is <span id="full-name"></span></h2>
+
+    <form id="name-form">
+      <label for="first-name">First Name</label>
+      <input id="first-name" type="text" placeholder="Enter your name" />
+
+      <label for="last-name">Last Name</label>
+      <input id="last-name" type="text" placeholder="Enter your last name" />
+    </form>
+
+    <footer>
       <a href="">Nosotros</a>
       <a href="">Contacto</a>
-   </footer>
-   <script src="script.js"></script>
-</body>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
