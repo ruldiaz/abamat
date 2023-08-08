@@ -63,3 +63,14 @@ firstName.addEventListener('keyup', () => {
 lastName.addEventListener('keyup', () => {
   return updateFullName();
 });
+
+// sidebar
+const menuSidebar = document.querySelector('#menu-sidebar');
+
+function openSidebar() {
+  const element = document.querySelector('#app-sidebar');
+  element.classList.toggle('show');
+}
+menuSidebar.addEventListener('click', () => {
+  openSidebar();
+});
