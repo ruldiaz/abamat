@@ -74,3 +74,37 @@ function openSidebar() {
 menuSidebar.addEventListener('click', () => {
   openSidebar();
 });
+
+// enable sidebar button
+const enableButton = document.querySelector('#enable-sidebar-btn');
+enableButton.addEventListener('click', () => {
+  menuSidebar.removeAttribute('disabled');
+});
+
+// disable sidebar button
+const disableButton = document.querySelector('#disable-sidebar-btn');
+disableButton.addEventListener('click', () => {
+  menuSidebar.setAttribute('disabled', 'disabled');
+});
+
+// highlighted item in shopping list
+const handleItemClick = (li) => {
+  li.classList.toggle('highlighted');
+};
+
+document.querySelectorAll('#shopping-list li').forEach((li) => {
+  li.addEventListener('click', (event) => {
+    handleItemClick(event.currentTarget);
+  });
+});
+
+// validate if button is disabled
+
+function isDisabled() {
+  return menuSidebar.hasAttribute('disabled');
+}
+
+menuSidebar.setAttribute('disabled', 'disabled');
+menuSidebar.removeAttribute('disabled');
+
+console.log(isDisabled(menuSidebar));

@@ -22,6 +22,22 @@ a {
   display: inline-block;
 }
 
+.container {
+  max-width: 800px;
+  margin: 0px auto;
+  padding: 0 20px;
+}
+
+#shopping-list li {
+  line-height: 30px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.highlighted {
+  background-color: yellow;
+}
+
 .nav-item a {
   text-align: center;
   padding: 13px 20px;
@@ -50,7 +66,7 @@ a {
   transform: translateX(0);
 }
 
-#app-sidebar {
+#app-sidebar ul {
   list-style: none;
   padding-left: 20px;
   line-height: 30px;
