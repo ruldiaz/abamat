@@ -12,6 +12,12 @@ paragraphs.forEach((paragraph) => {
 
 console.log(paragraphs.length); // amount of paragraphs
 
+// toggle dark mode button
+const darkModeBtn = document.querySelector('#dark-mode-btn');
+darkModeBtn.addEventListener('click', () => {
+  document.documentElement.classList.toggle('dark');
+});
+
 // converting node list into array and printing the content
 const newArray = [...paragraphs].map((e) => {
   return e.textContent;
@@ -55,9 +61,9 @@ function getFullName() {
 // shows a message if name is raul diaz
 function updateFullName() {
   fullName.textContent = getFullName();
-  if(fullName.textContent === 'raul diaz') {
-    document.querySelector("#greetings-raul").style.display = "";
-  } 
+  if (fullName.textContent === 'raul diaz') {
+    document.querySelector('#greetings-raul').style.display = '';
+  }
 }
 
 firstName.addEventListener('keyup', () => {
@@ -66,6 +72,14 @@ firstName.addEventListener('keyup', () => {
 
 lastName.addEventListener('keyup', () => {
   return updateFullName();
+});
+
+// remove permanently your name is header
+const removeBtn = document.querySelector('#remove-btn');
+const nameHeader = document.querySelector('#your-name-is');
+
+removeBtn.addEventListener('click', () => {
+  nameHeader.remove();
 });
 
 // sidebar
@@ -115,12 +129,11 @@ console.log(isDisabled(menuSidebar));
 
 // console.log(menuSidebar.style);
 
-
 // ocultando el boton ok y el consentimiento de cookies
 
-const cookieButton = document.querySelector("#cookie-ok");
-const cookieConsent = document.querySelector("#cookies-consent");
+const cookieButton = document.querySelector('#cookie-ok');
+const cookieConsent = document.querySelector('#cookies-consent');
 
-cookieButton.addEventListener("click", ()=> {
-  cookieConsent.style.display = "none";
+cookieButton.addEventListener('click', () => {
+  cookieConsent.style.display = 'none';
 });

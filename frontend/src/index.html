@@ -16,24 +16,28 @@
         <li>
           <button id="disable-sidebar-btn">Disable Sidebar Button</button>
         </li>
-        <li><button id="menu-sidebar">Sidebar</button></li>
+        <li><button id="menu-sidebar">Toggle Sidebar</button></li>
       </ul>
     </nav>
     <h1>Abamat</h1>
 
     <h3>Bienvenidos!</h3>
 
+    <button id="dark-mode-btn">Toggle Dark Mode !</button>
     <div id="cookies-consent">
       <p>Tus datos serán guardados en cookies !</p>
       <button id="cookie-ok">Ok</button>
     </div>
-    
 
     <div id="app-sidebar" class="show">
       <ul>
         <li>Home</li>
         <li>About us</li>
-        <li>Contact us</li>
+        <li>
+          <a href="#name-form" style="text-decoration: none; color: black"
+            >Your name is section</a
+          >
+        </li>
       </ul>
       <div class="end">
         <hr />
@@ -81,8 +85,9 @@
 
     <textarea id="user-comment" placeholder="Enter your comment..."></textarea>
 
-    <h2>Your name is <span id="full-name"></span></h2>
-    <p id="greetings-raul" style="display: none;">Welcome Raúl !!!</p>
+    <br /><br /><button id="remove-btn">Remove this header</button>
+    <h2 id="your-name-is">Your name is <span id="full-name"></span></h2>
+    <p id="greetings-raul" style="display: none">Welcome Raúl !!!</p>
 
     <form id="name-form">
       <label for="first-name">First Name</label>
@@ -91,8 +96,6 @@
       <label for="last-name">Last Name</label>
       <input id="last-name" type="text" placeholder="Enter your last name" />
     </form>
-
-    
 
     <br />
 
