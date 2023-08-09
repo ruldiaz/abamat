@@ -137,3 +137,7 @@ const cookieConsent = document.querySelector('#cookies-consent');
 cookieButton.addEventListener('click', () => {
   cookieConsent.style.display = 'none';
 });
+
+// adding dataset to menusidebar button
+menuSidebar.dataset.testingData = 'true';
+console.log(menuSidebar.dataset.testingData === 'true');
