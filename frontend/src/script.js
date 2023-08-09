@@ -52,8 +52,12 @@ function getFullName() {
   return firstName.value + ' ' + lastName.value;
 }
 
+// shows a message if name is raul diaz
 function updateFullName() {
   fullName.textContent = getFullName();
+  if(fullName.textContent === 'raul diaz') {
+    document.querySelector("#greetings-raul").style.display = "";
+  } 
 }
 
 firstName.addEventListener('keyup', () => {
@@ -108,3 +112,15 @@ menuSidebar.setAttribute('disabled', 'disabled');
 menuSidebar.removeAttribute('disabled');
 
 console.log(isDisabled(menuSidebar));
+
+// console.log(menuSidebar.style);
+
+
+// ocultando el boton ok y el consentimiento de cookies
+
+const cookieButton = document.querySelector("#cookie-ok");
+const cookieConsent = document.querySelector("#cookies-consent");
+
+cookieButton.addEventListener("click", ()=> {
+  cookieConsent.style.display = "none";
+});
