@@ -13,8 +13,8 @@ img {
 }
 
 a {
-  color: #dca15d;
-  text-decoration: underline;
+  color: blue;
+  text-decoration: none;
   line-height: 1.4;
   padding: 0.25em;
 }

@@ -186,3 +186,20 @@ formProductosSugeridos.addEventListener('submit', (event) => {
 // fetching news
 
 const newsList = document.querySelector('#news-list');
+
+try {
+  fetch(`http://localhost:3001/abamat/news`)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      data.forEach((e) => {
+        console.log(e.title);
+        newsList.insertAdjacentHTML(
+          'beforeend',
+          `<li><a href="${e.url}" target="_blank">${e.title}</a></li>`
+        );
+      });
+    });
+} catch (error) {
+  console.log(error);
+}
