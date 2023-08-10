@@ -141,3 +141,8 @@ cookieButton.addEventListener('click', () => {
 // adding dataset to menusidebar button
 menuSidebar.dataset.testingData = 'true';
 console.log(menuSidebar.dataset.testingData === 'true');
+
+// looking or searching for the parent element of the menuSidebar
+console.log('parent element of menusidebar', menuSidebar.parentElement);
+
+console.log('closest css selector', menuSidebar.closest('#navbar'));
