@@ -52,9 +52,9 @@
 
     <div class="container" id="main">
       <ul id="shopping-list">
-        <li class="highlighted">Cemento</li>
-        <li>Acero</li>
-        <li>Ferretería</li>
+        <li class="highlighted">Servicio a Domicilio</li>
+        <li>Precios competitivos</li>
+        <li>Calidad de productos</li>
       </ul>
     </div>
 
@@ -66,14 +66,30 @@
       Gutiérrez, Chiapas.
     </p>
 
-    <h4>Productos</h4>
+    <h4 id="productos-header">Productos</h4>
 
-    <button>Cemento</button>
-    <button>Acero</button>
-    <button>Ferretería</button>
+    <ul id="listado-productos"></ul>
 
     <br /><br />
 
+    <div id="contenedor-sugerido">
+      <h3>Productos sugeridos</h3>
+      <p>Que productos te gustaría encontrar ?</p>
+
+      <form id="sugeridos-form">
+        <label for="item-name"></label>
+        <input
+          type="text"
+          id="item-name"
+          placeholder="Enter a name of product"
+        />
+
+        <input type="submit" value="Agregar" />
+      </form>
+      <ul id="listado-productos-sugeridos"></ul>
+    </div>
+
+    <br />
     <select id="materiales-dropdown">
       <option value="">Please select</option>
       <option value="cemento">Cemento</option>
@@ -99,10 +115,13 @@
 
     <br />
 
+    <div id="news">
+      <ul id="news-list"></ul>
+    </div>
+
     <footer>
-      <a href="">Nosotros</a>
-      <a href="">Contacto</a>
+      <p>Developed by RHDF</p>
     </footer>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>

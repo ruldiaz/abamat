@@ -1,0 +1,27 @@
+{
+  "name": "abamat",
+  "version": "1.0.0",
+  "description": "The backend for abamat",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruldiaz/abamat.git"
+  },
+  "author": "Raul Diaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruldiaz/abamat/issues"
+  },
+  "homepage": "https://github.com/ruldiaz/abamat#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.2",
+    "nodemon": "^3.0.1"
+  }
+}

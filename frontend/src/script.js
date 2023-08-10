@@ -146,3 +146,43 @@ console.log(menuSidebar.dataset.testingData === 'true');
 console.log('parent element of menusidebar', menuSidebar.parentElement);
 
 console.log('closest css selector', menuSidebar.closest('#navbar'));
+
+// productos header y array
+const productos = [
+  'Cemento',
+  'Varilla',
+  'Alambron',
+  'Alambre Recocido',
+  'Clavos',
+  'Malla electrosoldada',
+  'Armex',
+];
+
+const listadoProductos = document.querySelector('#listado-productos');
+
+productos.forEach((producto) => {
+  listadoProductos.insertAdjacentHTML('beforeend', `<li>${producto}</li>`);
+});
+
+listadoProductos.style.color = 'blue';
+listadoProductos.style.textAlign = 'center';
+
+// productos sugeridos
+function agregarItem(item) {
+  const productosSugeridos = document.querySelector(
+    '#listado-productos-sugeridos'
+  );
+  productosSugeridos.insertAdjacentHTML('beforeend', `<li>${item}</li>`);
+}
+
+const formProductosSugeridos = document.querySelector('#sugeridos-form');
+const itemName = document.querySelector('#item-name');
+
+formProductosSugeridos.addEventListener('submit', (event) => {
+  event.preventDefault();
+  agregarItem(itemName.value);
+});
+
+// fetching news
+
+const newsList = document.querySelector('#news-list');

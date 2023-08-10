@@ -8,6 +8,10 @@ html.dark {
   color: white;
 }
 
+img {
+  width: 250px;
+}
+
 a {
   color: #dca15d;
   text-decoration: underline;
