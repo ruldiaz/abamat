@@ -203,3 +203,12 @@ try {
 } catch (error) {
   console.log(error);
 }
+
+// using createElement
+const newsDiv = document.querySelector('#news');
+const newImg = document.createElement('img');
+newImg.setAttribute(
+  'src',
+  'https://www.crsi.org/wp-content/uploads/black-bar-stacked.jpg'
+);
+newsDiv.appendChild(newImg);
