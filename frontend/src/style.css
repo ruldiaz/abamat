@@ -8,6 +8,12 @@ body {
 table {
   border: 1px solid gray;
   box-shadow: 2px 2px 2px gray;
+  font-size: small;
+  color: black;
+}
+
+table img {
+  width: 150px;
 }
 
 button {
