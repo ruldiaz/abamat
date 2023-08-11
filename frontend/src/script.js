@@ -164,6 +164,29 @@ productos.forEach((producto) => {
   listadoProductos.insertAdjacentHTML('beforeend', `<li>${producto}</li>`);
 });
 
+fetch('http://localhost:3001/abamat/products')
+  .then((response) => response.json())
+  .then((data) => {
+    data.forEach((item) => {
+      listadoProductos.insertAdjacentHTML(
+        'beforeend',
+        `
+        <table>
+          <tr>
+            <td>${item.title}</td>
+          </tr>
+          <tr>
+            <td><img src="${item.image}" /></td>
+          </tr>
+          <tr>
+            <td>$ ${item.price}</td>
+          </tr>
+        </table>
+        `
+      );
+    });
+  });
+
 listadoProductos.style.color = 'blue';
 listadoProductos.style.textAlign = 'center';
 

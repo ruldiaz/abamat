@@ -5,6 +5,15 @@ body {
   font-size: 0.9em;
 }
 
+table {
+  border: 1px solid gray;
+  box-shadow: 2px 2px 2px gray;
+}
+
+button {
+  cursor: pointer;
+}
+
 #logo-abamat {
   width: 100px;
 }
