@@ -60,7 +60,7 @@ cookieButton.addEventListener('click', () => {
 
 const listadoProductos = document.querySelector('#listado-productos');
 
-async function fetchAndRenderProducts() {
+(async () => {
   try {
     const response = await fetch('http://localhost:3001/abamat/products');
     const data = await response.json();
@@ -89,9 +89,7 @@ async function fetchAndRenderProducts() {
   } catch (error) {
     console.error('Error fetching products: ', error);
   }
-}
-
-fetchAndRenderProducts();
+})();
 
 // create product form
 
