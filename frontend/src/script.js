@@ -191,11 +191,11 @@ listadoProductos.style.color = 'blue';
 listadoProductos.style.textAlign = 'center';
 
 // productos sugeridos
-function agregarItem(item) {
+async function agregarItem(item) {
   const productosSugeridos = document.querySelector(
     '#listado-productos-sugeridos'
   );
-  productosSugeridos.insertAdjacentHTML('beforeend', `<li>${item}</li>`);
+  await productosSugeridos.insertAdjacentHTML('beforeend', `<li>${item}</li>`);
 }
 
 const formProductosSugeridos = document.querySelector('#sugeridos-form');
