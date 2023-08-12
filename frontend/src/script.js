@@ -164,9 +164,12 @@ productos.forEach((producto) => {
   listadoProductos.insertAdjacentHTML('beforeend', `<li>${producto}</li>`);
 });
 
-fetch('http://localhost:3001/abamat/products')
-  .then((response) => response.json())
-  .then((data) => {
+async function fetchAndRenderProducts() {
+  try {
+    const response = await fetch('http://localhost:3001/abamat/products');
+    const data = await response.json();
+    console.log('Fetched data: ', data);
+
     data.forEach((item) => {
       listadoProductos.insertAdjacentHTML(
         'beforeend',
@@ -185,17 +188,21 @@ fetch('http://localhost:3001/abamat/products')
         `
       );
     });
-  });
+    listadoProductos.style.color = 'blue';
+    listadoProductos.style.textAlign = 'center';
+  } catch (error) {
+    console.error('Error fetching products: ', error);
+  }
+}
 
-listadoProductos.style.color = 'blue';
-listadoProductos.style.textAlign = 'center';
+fetchAndRenderProducts();
 
 // productos sugeridos
-async function agregarItem(item) {
+function agregarItem(item) {
   const productosSugeridos = document.querySelector(
     '#listado-productos-sugeridos'
   );
-  await productosSugeridos.insertAdjacentHTML('beforeend', `<li>${item}</li>`);
+  productosSugeridos.insertAdjacentHTML('beforeend', `<li>${item}</li>`);
 }
 
 const formProductosSugeridos = document.querySelector('#sugeridos-form');
