@@ -179,7 +179,7 @@ fetch('http://localhost:3001/abamat/products')
             <td><img src="${item.image}" /></td>
           </tr>
           <tr>
-            <td>$ ${item.price}</td>
+            <td>$ ${item.price} ${item.unit.toLowerCase()}</td>
           </tr>
         </table>
         `
@@ -235,3 +235,41 @@ newImg.setAttribute(
   'https://www.crsi.org/wp-content/uploads/black-bar-stacked.jpg'
 );
 newsDiv.appendChild(newImg);
+
+// create product form
+
+const createProductForm = document.querySelector('#create-product-form');
+
+createProductForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const code = document.querySelector('#code').value;
+  const title = document.querySelector('#title').value;
+  const brand = document.querySelector('#brand').value;
+  const image = document.querySelector('#image').value;
+  const price = document.querySelector('#price').value;
+  const unit = document.querySelector('#unit').value;
+  const category = document.querySelector('#category').value;
+
+  try {
+    const response = await fetch('http://localhost:3001/abamat/newproduct', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        code,
+        title,
+        brand,
+        image,
+        price,
+        unit,
+        category,
+      }),
+    });
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+});

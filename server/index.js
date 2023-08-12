@@ -18,6 +18,7 @@ const port = process.env.PORT || 3001;
 
 app.use('/abamat/news', newsRoutes);
 app.use('/abamat/products', productRoutes);
+app.use('/abamat/newproduct', productRoutes);
 
 app.listen(port, () => {
   console.log('Express Js Server running on port', port);

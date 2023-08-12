@@ -6,6 +6,8 @@ body {
 }
 
 table {
+  display: inline-block;
+  flex-wrap: wrap;
   border: 1px solid gray;
   box-shadow: 2px 2px 2px gray;
   font-size: small;
@@ -13,7 +15,8 @@ table {
 }
 
 table img {
-  width: 150px;
+  width: 200px;
+  height: 200px;
 }
 
 button {
