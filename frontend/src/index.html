@@ -63,14 +63,21 @@
         para la construcción.
       </p>
 
-      <div class="container" id="main">
-        <ul id="shopping-list">
-          <li class="highlighted">Servicio a Domicilio</li>
-          <li>Precios competitivos</li>
-          <li>Calidad de productos</li>
-        </ul>
+      <div>
+        <div class="nav-tabs">
+          <ul>
+            <li><button class="tab active" data-content="#about-us">About us</button></li>
+            <li><button class="tab" data-content="#the-team">The team</button></li>
+            <li><button class="tab" data-content="#others-say">What others say</button></li>
+          </ul>
+          <div class="borders-tab"></div>
+        </div>
+        <p id="about-us" class="tab-content show">About us content here</p>
+        <p id="the-team" class="tab-content">The team content here</p>
+        <p id="others-say" class="tab-content">What others say content here</p>
       </div>
 
+      <br />
       <h4 id="productos-header">Productos</h4>
 
       <ul id="listado-productos"></ul>

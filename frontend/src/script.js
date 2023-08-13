@@ -29,25 +29,20 @@ disableButton.addEventListener('click', () => {
   menuSidebar.setAttribute('disabled', 'disabled');
 });
 
-// highlighted item in shopping list
-const handleItemClick = (li) => {
-  li.classList.toggle('highlighted');
-};
+// tabs menu
+const tabs = document.querySelectorAll(".tab");
 
-document.querySelectorAll('#shopping-list li').forEach((li) => {
-  li.addEventListener('click', (event) => {
-    handleItemClick(event.currentTarget);
-  });
-});
+tabs.forEach((tab)=>{
+  tab.addEventListener("click", (event)=>{
+    const showThisTab = event.currentTarget.dataset.content;
+    const tabContent = document.querySelector(showThisTab);
+    document.querySelector(".show")?.classList.remove("show");
+    document.querySelector(".active")?.classList.remove("active");
+    event.currentTarget.classList.add("active");
+    tabContent.classList.add("show");
+  })
+})
 
-// validate if button is disabled
-
-function isDisabled() {
-  return menuSidebar.hasAttribute('disabled');
-}
-
-menuSidebar.setAttribute('disabled', 'disabled');
-menuSidebar.removeAttribute('disabled');
 
 // ocultando el boton ok y el consentimiento de cookies
 
@@ -72,7 +67,7 @@ const listadoProductos = document.querySelector('#listado-productos');
         `
         <table>
           <tr>
-            <td>${item.title}</td>
+            <td id="item-title">${item.title}<i class="fa-solid fa-circle-plus"></i></td>
           </tr>
           <tr>
             <td><img src="${item.image}" /></td>
@@ -86,6 +81,15 @@ const listadoProductos = document.querySelector('#listado-productos');
     });
     listadoProductos.style.color = 'blue';
     listadoProductos.style.textAlign = 'center';
+
+    const itemTitles = document.querySelectorAll("i");
+
+    itemTitles.forEach((item)=>{
+      item.addEventListener("click", (event)=>{
+        console.log(event.currentTarget.parentElement.textContent)
+      })
+    })
+
   } catch (error) {
     console.error('Error fetching products: ', error);
   }

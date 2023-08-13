@@ -19,6 +19,12 @@ table img {
   height: 180px;
 }
 
+table i.fa-circle-plus {
+  float: right;
+  cursor: pointer;
+  font-size: larger;
+}
+
 button {
   cursor: pointer;
 }
@@ -54,6 +60,57 @@ a {
   cursor: pointer;
 }
 
+.nav-tabs {
+  position: relative;
+  margin: 0 0 40px 0;
+}
+
+.nav-tabs ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 0;
+}
+
+.nav-tabs li {
+  display: inline-block;
+}
+
+.nav-tabs .tab {
+  text-decoration: none;
+  color: black;
+  margin-right: 20px;
+  cursor: pointer;
+  line-height: 1.6;
+  padding: 0.25em;
+}
+
+.nav-tabs .tab.active {
+  border-bottom: 7px solid black;
+}
+
+.borders-tab {
+  position: absolute;
+  z-index: -1;
+  bottom: 3px;
+  border-bottom: black solid 1 px;
+  min-width: 400px;
+}
+
+.tab {
+  all: unset;
+}
+
+.tab-content {
+  max-width: 450px;
+  display: none;
+  margin: 0 auto;
+}
+
+.tab-content.show {
+  display: block;
+}
+
 #navbar {
   width: 100%;
   display: flex;
@@ -69,17 +126,6 @@ a {
   max-width: 800px;
   margin: 0px auto;
   padding: 0 20px;
-}
-
-#shopping-list li {
-  line-height: 30px;
-  margin: 5px;
-  cursor: pointer;
-}
-
-.highlighted {
-  background-color: yellow;
-  color: black;
 }
 
 .nav-item a {
