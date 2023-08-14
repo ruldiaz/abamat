@@ -57,7 +57,7 @@ const listadoProductos = document.querySelector('#listado-productos');
 (async () => {
   try {
     const { data } = await axios.get(
-      'https://main--shimmering-lollipop-9c20f8.netlify.app/abamat/products'
+      'https://abamat-backend.onrender.com/abamat/products'
     );
     // const data = await response.json();
     console.log('Fetched data: ', data);
