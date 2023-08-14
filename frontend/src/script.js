@@ -56,7 +56,9 @@ const listadoProductos = document.querySelector('#listado-productos');
 
 (async () => {
   try {
-    const { data } = await axios.get('http://localhost:3001/abamat/products');
+    const { data } = await axios.get(
+      'https://main--shimmering-lollipop-9c20f8.netlify.app/abamat/products'
+    );
     // const data = await response.json();
     console.log('Fetched data: ', data);
 
@@ -94,6 +96,26 @@ const listadoProductos = document.querySelector('#listado-productos');
     console.error('Error fetching products: ', error);
   }
 })();
+
+// cotizador formulario
+
+const formularioCotizador = document.querySelector('#cotizador-form');
+formularioCotizador.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const cementoGris = document.querySelector('#cementogris').value;
+  const calidra = document.querySelector('#calidra').value;
+  const var3 = document.querySelector('#var3').value;
+  const var4 = document.querySelector('#var4').value;
+  const alambron = document.querySelector('#alambron').value;
+  const recocido = document.querySelector('#recocido').value;
+  const clavo2 = document.querySelector('#clavo2').value;
+  const clavo4 = document.querySelector('#clavo4').value;
+  const armex1520 = document.querySelector('#armex1520').value;
+  const armex1515 = document.querySelector('#armex1515').value;
+  const malla10 = document.querySelector('#malla10').value;
+  const malla4 = document.querySelector('#malla4').value;
+});
 
 // create product form
 
