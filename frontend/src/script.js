@@ -133,21 +133,24 @@ createProductForm.addEventListener('submit', async (event) => {
   const category = document.querySelector('#category').value;
 
   try {
-    const response = await fetch('http://localhost:3001/abamat/newproduct', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        code,
-        title,
-        brand,
-        image,
-        price,
-        unit,
-        category,
-      }),
-    });
+    const response = await fetch(
+      'https://abamat-backend.onrender.com/abamat/newproduct',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          code,
+          title,
+          brand,
+          image,
+          price,
+          unit,
+          category,
+        }),
+      }
+    );
     const data = await response.json();
     console.log(data);
   } catch (error) {
