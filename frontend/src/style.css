@@ -29,6 +29,11 @@ button {
   cursor: pointer;
 }
 
+#cotizador-form input {
+  width: 35px;
+  margin: 5px 5px;
+}
+
 #logo-abamat {
   width: 100px;
 }
