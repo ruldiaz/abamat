@@ -30,19 +30,18 @@ disableButton.addEventListener('click', () => {
 });
 
 // tabs menu
-const tabs = document.querySelectorAll(".tab");
+const tabs = document.querySelectorAll('.tab');
 
-tabs.forEach((tab)=>{
-  tab.addEventListener("click", (event)=>{
+tabs.forEach((tab) => {
+  tab.addEventListener('click', (event) => {
     const showThisTab = event.currentTarget.dataset.content;
     const tabContent = document.querySelector(showThisTab);
-    document.querySelector(".show")?.classList.remove("show");
-    document.querySelector(".active")?.classList.remove("active");
-    event.currentTarget.classList.add("active");
-    tabContent.classList.add("show");
-  })
-})
-
+    document.querySelector('.show')?.classList.remove('show');
+    document.querySelector('.active')?.classList.remove('active');
+    event.currentTarget.classList.add('active');
+    tabContent.classList.add('show');
+  });
+});
 
 // ocultando el boton ok y el consentimiento de cookies
 
@@ -57,8 +56,8 @@ const listadoProductos = document.querySelector('#listado-productos');
 
 (async () => {
   try {
-    const response = await fetch('http://localhost:3001/abamat/products');
-    const data = await response.json();
+    const { data } = await axios.get('http://localhost:3001/abamat/products');
+    // const data = await response.json();
     console.log('Fetched data: ', data);
 
     data.forEach((item) => {
@@ -67,7 +66,9 @@ const listadoProductos = document.querySelector('#listado-productos');
         `
         <table>
           <tr>
-            <td id="item-title">${item.title}<i class="fa-solid fa-circle-plus"></i></td>
+            <td id="item-title">${
+              item.title
+            }<i class="fa-solid fa-circle-plus"></i></td>
           </tr>
           <tr>
             <td><img src="${item.image}" /></td>
@@ -82,14 +83,13 @@ const listadoProductos = document.querySelector('#listado-productos');
     listadoProductos.style.color = 'blue';
     listadoProductos.style.textAlign = 'center';
 
-    const itemTitles = document.querySelectorAll("i");
+    const itemTitles = document.querySelectorAll('i');
 
-    itemTitles.forEach((item)=>{
-      item.addEventListener("click", (event)=>{
-        console.log(event.currentTarget.parentElement.textContent)
-      })
-    })
-
+    itemTitles.forEach((item) => {
+      item.addEventListener('click', (event) => {
+        console.log(event.currentTarget.parentElement.textContent);
+      });
+    });
   } catch (error) {
     console.error('Error fetching products: ', error);
   }
