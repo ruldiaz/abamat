@@ -103,18 +103,38 @@ const formularioCotizador = document.querySelector('#cotizador-form');
 formularioCotizador.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  const cementoGris = document.querySelector('#cementogris').value;
-  const calidra = document.querySelector('#calidra').value;
-  const var3 = document.querySelector('#var3').value;
-  const var4 = document.querySelector('#var4').value;
-  const alambron = document.querySelector('#alambron').value;
-  const recocido = document.querySelector('#recocido').value;
-  const clavo2 = document.querySelector('#clavo2').value;
-  const clavo4 = document.querySelector('#clavo4').value;
-  const armex1520 = document.querySelector('#armex1520').value;
-  const armex1515 = document.querySelector('#armex1515').value;
-  const malla10 = document.querySelector('#malla10').value;
-  const malla4 = document.querySelector('#malla4').value;
+  const cementoGris = document.querySelector('#cementogris').value || 0;
+  const calidra = document.querySelector('#calidra').value || 0;
+  const var3 = document.querySelector('#var3').value || 0;
+  const var4 = document.querySelector('#var4').value || 0;
+  const alambron = document.querySelector('#alambron').value || 0;
+  const recocido = document.querySelector('#recocido').value || 0;
+  const clavo2 = document.querySelector('#clavo2').value || 0;
+  const clavo4 = document.querySelector('#clavo4').value || 0;
+  const armex1520 = document.querySelector('#armex1520').value || 0;
+  const armex1515 = document.querySelector('#armex1515').value || 0;
+  const malla10 = document.querySelector('#malla10').value || 0;
+  const malla4 = document.querySelector('#malla4').value || 0;
+
+  const total = [
+    cementoGris * 235 +
+      calidra * 95 +
+      var3 * 151 +
+      var4 * 288 +
+      alambron * 26 +
+      recocido * 27 +
+      clavo2 * 46 +
+      clavo4 * 46 +
+      armex1520 * 150 +
+      armex1515 * 150 +
+      malla10 * 2300 +
+      malla4 * 6500,
+  ];
+
+  const totalCotizador = document.querySelector('#total-cotizador');
+  totalCotizador.textContent = total.reduce((acc, current) => {
+    return acc + current;
+  }, 0);
 });
 
 // create product form
