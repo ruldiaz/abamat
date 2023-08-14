@@ -182,3 +182,8 @@ a {
   padding-left: 20px;
   padding-bottom: 0;
 }
+
+#dark-mode-btn {
+  text-align: center;
+  margin: 0 auto;
+}
