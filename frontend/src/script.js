@@ -97,6 +97,20 @@ const listadoProductos = document.querySelector('#listado-productos');
   }
 })();
 
+// adding css to input error or success class
+
+const colors = document.querySelector("#cementogris");
+colors.addEventListener("blur", ()=>{
+  if(colors.value.length < 1){
+    colors.classList.remove("success");
+    colors.classList.add("error");
+  }else if(colors.value.length > 0){
+    colors.classList.remove("error");
+    colors.classList.add("success");
+  }
+  
+})
+
 // cotizador formulario
 
 const formularioCotizador = document.querySelector('#cotizador-form');
