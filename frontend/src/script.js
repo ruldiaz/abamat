@@ -137,6 +137,29 @@ formularioCotizador.addEventListener('submit', (event) => {
   }, 0);
 });
 
+// piezas por varilla
+
+const piezasVarilla = {
+  piezas: {
+    var3: '150',
+    var4: '83',
+    var5: '53',
+    var6: '37',
+    var8: '21',
+  },
+};
+
+function getPiezasVarilla(calibre) {
+  return piezasVarilla.piezas[calibre];
+}
+
+const select = document.querySelector('#piezas-varilla');
+const resultadoSelect = document.querySelector('#resultado-piezas-varilla');
+
+select.addEventListener('change', () => {
+  resultadoSelect.textContent = getPiezasVarilla(select.value) + ' piezas';
+});
+
 // create product form
 
 const createProductForm = document.querySelector('#create-product-form');

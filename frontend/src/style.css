@@ -187,3 +187,12 @@ a {
   text-align: center;
   margin: 0 auto;
 }
+
+#piezas-varilla {
+  text-align: center;
+}
+
+#seccion-piezas select,
+p {
+  display: inline-flex;
+}
