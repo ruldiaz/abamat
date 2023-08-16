@@ -40,6 +40,7 @@ button {
 
 #dark-mode-btn {
   margin-left: 600px;
+  display: block;
 }
 
 #main-container {

@@ -43,15 +43,6 @@ tabs.forEach((tab) => {
   });
 });
 
-// ocultando el boton ok y el consentimiento de cookies
-
-const cookieButton = document.querySelector('#cookie-ok');
-const cookieConsent = document.querySelector('#cookies-consent');
-
-cookieButton.addEventListener('click', () => {
-  cookieConsent.style.display = 'none';
-});
-
 const listadoProductos = document.querySelector('#listado-productos');
 
 (async () => {
@@ -99,17 +90,16 @@ const listadoProductos = document.querySelector('#listado-productos');
 
 // adding css to input error or success class
 
-const colors = document.querySelector("#cementogris");
-colors.addEventListener("blur", ()=>{
-  if(colors.value.length < 1){
-    colors.classList.remove("success");
-    colors.classList.add("error");
-  }else if(colors.value.length > 0){
-    colors.classList.remove("error");
-    colors.classList.add("success");
+const colors = document.querySelector('#cementogris');
+colors.addEventListener('blur', () => {
+  if (colors.value.length < 1) {
+    colors.classList.remove('success');
+    colors.classList.add('error');
+  } else if (colors.value.length > 0) {
+    colors.classList.remove('error');
+    colors.classList.add('success');
   }
-  
-})
+});
 
 // cotizador formulario
 
@@ -210,6 +200,25 @@ createProductForm.addEventListener('submit', async (event) => {
     );
     const data = await response.json();
     console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+// products list from bind
+
+const productsListA = document.querySelector('#products-list-a');
+const productsListAButton = document.querySelector('#products-list-a-btn');
+
+productsListAButton.addEventListener('click', async () => {
+  try {
+    const { data } = await axios.get(
+      'http://localhost:3001/abamat/bind-products'
+    );
+    console.log(data);
+    data.forEach((item) => {
+      productsListA.insertAdjacentHTML('beforeend', `<li>${item.title}</li>`);
+    });
   } catch (error) {
     console.error(error);
   }

@@ -4,6 +4,7 @@ import cors from 'cors';
 import newsRoutes from './routes/news-routes.js';
 import productRoutes from './routes/product-routes.js';
 import connectToDatabase from './database.js';
+import productBindRoutes from './routes/product-bind-routes.js';
 
 // Routes
 
@@ -19,6 +20,7 @@ const port = process.env.PORT || 3001;
 app.use('/abamat/news', newsRoutes);
 app.use('/abamat/products', productRoutes);
 app.use('/abamat/newproduct', productRoutes);
+app.use('/abamat/bind-products', productBindRoutes);
 
 app.listen(port, () => {
   console.log('Express Js Server running on port', port);
