@@ -97,6 +97,8 @@ const listadoProductos = document.querySelector('#listado-productos');
   }
 })();
 
+// adding css to input error or success class
+
 const colors = document.querySelector("#cementogris");
 colors.addEventListener("blur", ()=>{
   if(colors.value.length < 1){
