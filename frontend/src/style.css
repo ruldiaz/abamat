@@ -187,3 +187,15 @@ a {
   text-align: center;
   margin: 0 auto;
 }
+
+input.error {
+  border-top-color: #F44336;
+  border-right-color: #F44336;
+  border-bottom-color: #F44336;
+}
+
+input.success {
+  border-top-color: #458179;
+  border-right-color: #458179 ;
+  border-bottom-color: #458179;
+}
