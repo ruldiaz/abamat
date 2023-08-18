@@ -140,6 +140,8 @@ a:visited {
 
 button#menu-sidebar {
   width: 25px;
+  text-align: center;
+  align-items: center;
 }
 
 #navbar li {
