@@ -19,34 +19,21 @@
           alt="logo abamat"
         /><br />
         <ul>
-          <li class="nav-item"><a href="">Nosotros</a></li>
-          <li><a href="" class="nav-item">Registro</a></li>
-          <li>
-            <button id="enable-sidebar-btn">Enable Sidebar Button</button>
-          </li>
-          <li>
-            <button id="disable-sidebar-btn">Disable Sidebar Button</button>
-          </li>
           <li>
             <button id="menu-sidebar"><i class="fa-solid fa-bars"></i></button>
           </li>
         </ul>
       </nav>
 
-      <h2>Bienvenidos!</h2>
+      <h2 id="inicio">Bienvenidos!</h2>
 
       <button id="dark-mode-btn">Cambiar a fondo obscuro</button>
 
       <div id="app-sidebar">
         <ul>
-          <li>Home</li>
-          <li>About us</li>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#cotizador-header">Cotizador</a></li>
           <li><a href="#ubicacion">Contacto</a></li>
-          <li>
-            <a href="#name-form" style="text-decoration: none; color: black"
-              >Your name is section</a
-            >
-          </li>
         </ul>
         <div class="end">
           <hr />
@@ -94,7 +81,7 @@
 
       <ul id="listado-productos"></ul>
 
-      <h5>Cotizador</h5>
+      <h3 id="cotizador-header">Cotizador</h3>
       <form id="cotizador-form">
         <input type="text" id="cementogris" />
         <label for="cementogris">Bulto Cemento Gris cpc30r envase 50 kg</label
@@ -204,8 +191,6 @@
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-
-      <a href="products.html">Products</a>
 
       <ul id="products-list-a"></ul>
 
