@@ -17,18 +17,6 @@ menuSidebar.addEventListener('click', () => {
   openSidebar();
 });
 
-// enable sidebar button
-const enableButton = document.querySelector('#enable-sidebar-btn');
-enableButton.addEventListener('click', () => {
-  menuSidebar.removeAttribute('disabled');
-});
-
-// disable sidebar button
-const disableButton = document.querySelector('#disable-sidebar-btn');
-disableButton.addEventListener('click', () => {
-  menuSidebar.setAttribute('disabled', 'disabled');
-});
-
 // tabs menu
 const tabs = document.querySelectorAll('.tab');
 
