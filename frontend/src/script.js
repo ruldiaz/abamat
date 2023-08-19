@@ -205,9 +205,38 @@ productsListAButton.addEventListener('click', async () => {
     );
     console.log(data);
     data.forEach((item) => {
-      productsListA.insertAdjacentHTML('beforeend', `<li>${item.title}</li>`);
+      productsListA.insertAdjacentHTML('beforeend', `<li>${item.title.toLowerCase()}</li>`);
     });
   } catch (error) {
     console.error(error);
   }
 });
+
+
+// modal
+
+const btnOpenModal = document.querySelector(".show-modal");
+const btnCloseModal = document.querySelector(".close-modal")
+const overlay = document.querySelector(".overlay");
+
+const openModal = function() {
+  document.querySelector(".modal")?.classList.remove("hidden");
+  document.querySelector(".overlay")?.classList.remove("hidden");
+}
+
+const closeModal = function() {
+  document.querySelector(".modal")?.classList.add("hidden");
+  document.querySelector(".overlay")?.classList.add("hidden");
+}
+
+btnOpenModal.addEventListener("click", openModal);
+
+btnCloseModal.addEventListener("click", closeModal);
+
+overlay.addEventListener("click", closeModal);
+
+document.documentElement.addEventListener("keydown", function(event){
+  if(event.key === 'Escape'){
+    closeModal()
+  }
+})
