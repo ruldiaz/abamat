@@ -58,7 +58,6 @@ button {
 
 #cotizador-form {
   text-align:left;
-  margin-left: 33%;
 }
 
 #cotizador-form input {
@@ -89,6 +88,7 @@ button {
 #main-container {
   background-color: #e0e0e9;
   max-width: 1000px;
+  min-width: 100%;
   text-align: center;
   margin: 0 auto;
 }
