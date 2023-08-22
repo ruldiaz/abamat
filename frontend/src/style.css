@@ -87,7 +87,7 @@ button {
 
 #main-container {
   background-color: #e0e0e9;
-  max-width: 1000px;
+  max-width: 100%;
   min-width: 100%;
   text-align: center;
   margin: 0 auto;
