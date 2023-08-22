@@ -19,15 +19,14 @@
           alt="logo abamat"
         /><br />
         <ul>
+          <li><button id="dark-mode-btn">Fondo/pantalla</button></li>
           <li>
             <button id="menu-sidebar"><i class="fa-solid fa-bars"></i></button>
           </li>
         </ul>
       </nav>
 
-      <h2 id="inicio">Bienvenidos!</h2>
-
-      <button id="dark-mode-btn">Cambiar fondo de pantalla</button>
+      <h2 id="inicio">Abastecedora de Materiales</h2>
 
       <div id="app-sidebar">
         <ul>
@@ -41,88 +40,80 @@
         </div>
       </div>
 
-      <p>
-        Abamat es una empresa dedicada a la venta y distribución de materiales
-        para la construcción.
-      </p>
-
       <div>
         <div class="nav-tabs">
           <ul>
             <li>
               <button class="tab active" data-content="#about-us">
-                Acerca de...
+                Cementos
               </button>
             </li>
             <li>
               <button class="tab" data-content="#the-team">
-                Oferta de productos
+                Acero
               </button>
             </li>
             <li>
-              <button class="tab" data-content="#others-say">Contacto</button>
+              <button class="tab" data-content="#others-say">Ferretería</button>
             </li>
           </ul>
           <div class="borders-tab"></div>
         </div>
         <p id="about-us" class="tab-content show">
-          Somos una empresa dedicada a la comercialización de productos para la
-          construcción.
+          Cemento Gris CPC30R envase de 50 kg, Cemento Blanco, Cemento resistente a sulfatos, Cemento rojizo fuerte más.
         </p>
         <p id="the-team" class="tab-content">
-          Distribuimos productos para la construcción como cemento, acero, cal,
-          ferretería y plomería.
+          Varilla corrugada diferentes medidas, alambrón, alambre recocido, clavos, mallas electrosoldadas, armex.
         </p>
-        <p id="others-say" class="tab-content">961 14 658 23</p>
+        <p id="others-say" class="tab-content">Productos ferreteros, material eléctrico, plomería.</p>
       </div>
-
-      <br />
-      <h4 id="productos-header">Lista de Productos</h4>
-
-      <ul id="listado-productos"></ul>
 
       <h3 id="cotizador-header">Cotizador</h3>
       <form id="cotizador-form">
-        <input type="text" id="cementogris" />
-        <label for="cementogris">Bulto Cemento Gris cpc30r envase 50 kg</label
-        ><br />
-
-        <input type="text" id="calidra" />
-        <label for="calidra">Bulto Calidra envase 22.5 kg</label><br />
-
-        <input type="text" id="var3" />
-        <label for="var3">pz Varilla corrugada 3/8"</label><br />
-
-        <input type="text" id="var4" />
-        <label for="var4">pz Varilla corrugada 1/2"</label><br />
-
-        <input type="text" id="alambron" />
-        <label for="alambron">kg Alambrón</label><br />
-
-        <input type="text" id="recocido" />
-        <label for="recocido">kg Alambre Recocido</label><br />
-
-        <input type="text" id="clavo2" />
-        <label for="clavo2">kg Clavo Estándar 2-1/2"</label><br />
-
-        <input type="text" id="clavo4" />
-        <label for="clavo4">kg Clavo Estándar 4"</label><br />
-
-        <input type="text" id="armex1520" />
-        <label for="armex1520">pz Armex 15x20</label><br />
-
-        <input type="text" id="armex1515" />
-        <label for="armex1515">pz Armex 15x15</label><br />
-
-        <input type="text" id="malla10" />
-        <label for="malla10">rollo Malla para piso electrosoldada 661010</label
-        ><br />
-
-        <input type="text" id="malla4" />
-        <label for="malla4">rollo Malla para losa electrosoldada 6644</label
-        ><br />
-
-        <input type="submit" value="Cotizar" id="cotizar-button" />
+        <div class="left-form">
+          <input type="text" id="cementogris" />
+          <label for="cementogris">Bulto Cemento Gris cpc30r envase 50 kg</label><br />
+  
+          <input type="text" id="calidra" />
+          <label for="calidra">Bulto Calidra envase 22.5 kg</label><br />
+  
+          <input type="text" id="var3" />
+          <label for="var3">pz Varilla corrugada 3/8"</label><br />
+  
+          <input type="text" id="var4" />
+          <label for="var4">pz Varilla corrugada 1/2"</label><br />
+  
+          <input type="text" id="alambron" />
+          <label for="alambron">kg Alambrón</label><br />
+  
+          <input type="text" id="recocido" />
+          <label for="recocido">kg Alambre Recocido</label><br />
+        </div>
+        <div class="right-form">
+          <input type="text" id="clavo2" />
+          <label for="clavo2">kg Clavo Estándar 2-1/2"</label><br />
+  
+          <input type="text" id="clavo4" />
+          <label for="clavo4">kg Clavo Estándar 4"</label><br />
+  
+          <input type="text" id="armex1520" />
+          <label for="armex1520">pz Armex 15x20</label><br />
+  
+          <input type="text" id="armex1515" />
+          <label for="armex1515">pz Armex 15x15</label><br />
+  
+          <input type="text" id="malla10" />
+          <label for="malla10">rollo Malla para piso electrosoldada 661010</label
+          ><br />
+  
+          <input type="text" id="malla4" />
+          <label for="malla4">rollo Malla para losa electrosoldada 6644</label
+          ><br />
+        </div>
+        <div class="bottom-form">
+          <button type="submit" value="Cotizar" id="cotizar-button" />Cotizar</button>
+        </div>
+        
       </form>
 
       <h4>Total:</h4>
@@ -206,6 +197,11 @@
       <ul id="products-list-a"></ul>
 
       <button id="products-list-a-btn">Mostrar productos</button>
+
+      <br />
+      <h4 id="productos-header">Lista de Productos</h4>
+
+      <ul id="listado-productos"></ul>
 
       <footer>
         <p>Developed by RHDF</p>

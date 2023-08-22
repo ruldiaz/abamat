@@ -56,17 +56,41 @@ button {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-#cotizador-form input {
-  width: 60px;
-  margin: 5px 5px;
+.left-form, .right-form {
+  text-align: left;
 }
+
+#cotizador-form input:not(.bottom-form) {
+  width: 50px;
+  margin-top: 12px;
+  margin-left: 0px;
+  text-align: left;
+  justify-content: left;
+}
+
+#cotizador-form {
+  display: flex;
+  flex-direction: row;
+  /* Add other styles as needed */
+}
+
+.bottom-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
 
 #cotizador-form button {
   background-color: greenyellow;
+  width: 65px;
 }
 
 #logo-abamat {
-  width: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 80px;
 }
 
 #dark-mode-btn {
@@ -75,6 +99,7 @@ button {
 }
 
 #main-container {
+  background-color: #e0e0e9;
   max-width: 1000px;
   text-align: center;
   margin: 0 auto;
@@ -152,6 +177,7 @@ a:visited {
 }
 
 #navbar {
+  background-color: #458179;
   width: 100%;
   display: flex;
   align-items: center;
@@ -159,6 +185,8 @@ a:visited {
 }
 
 button#menu-sidebar {
+  top: 8.2%;
+  position: fixed;
   width: 35px;
   text-align: center;
   align-items: center;
@@ -184,8 +212,8 @@ button#menu-sidebar {
 
 #app-sidebar {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 15%;
+  right: 0%;
   bottom: 0;
   background-color: #ececec;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
@@ -193,9 +221,9 @@ button#menu-sidebar {
   color: #2c2c2c;
   transition: transform 220ms;
   display: flex;
-  flex-direction: column;
-  height: 100%;
-  transform: translateX(-100%);
+  flex-direction:column;
+  height: 30%;
+  transform: translateX(100%);
 }
 
 #app-sidebar.show {
