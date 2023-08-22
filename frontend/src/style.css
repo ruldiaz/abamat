@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
-* {
-  margin: 0 auto;
-  padding: 0 0;
-  box-sizing: border-box;
-}
-
 select {
   background-color: greenyellow;
 }
@@ -333,4 +327,11 @@ input.success {
   border: none;
   background: none;
   background-color: greenyellow;
+}
+
+#ubicacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
