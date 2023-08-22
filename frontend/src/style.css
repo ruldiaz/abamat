@@ -210,7 +210,7 @@ button#menu-sidebar {
 
 #app-sidebar {
   position: fixed;
-  top: 20%;
+  top: 15%;
   right: 0;
   bottom: 0;
   background-color: #ececec;
@@ -222,6 +222,7 @@ button#menu-sidebar {
   flex-direction: column;
   height: 30%;
   transform: translateX(100%);
+  z-index: 1;
 }
 
 #app-sidebar.show {
