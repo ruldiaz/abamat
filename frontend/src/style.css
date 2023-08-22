@@ -56,31 +56,19 @@ button {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.left-form, .right-form {
-  text-align: left;
-}
-
-#cotizador-form input:not(.bottom-form) {
-  width: 50px;
-  margin-top: 12px;
-  margin-left: 0px;
-  text-align: left;
-  justify-content: left;
-}
-
 #cotizador-form {
-  display: flex;
-  flex-direction: row;
-  /* Add other styles as needed */
+  text-align:left;
+  margin-left: 33%;
+}
+
+#cotizador-form input {
+  width: 50px;
+  margin: 5px auto;
 }
 
 .bottom-form {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  margin-top: 15px;
 }
-
 
 #cotizador-form button {
   background-color: greenyellow;
