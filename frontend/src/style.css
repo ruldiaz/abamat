@@ -69,6 +69,10 @@ button {
   width: 65px;
 }
 
+.add {
+  cursor: pointer;
+}
+
 #logo-abamat {
   margin-top: 10px;
   margin-bottom: 10px;
