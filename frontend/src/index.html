@@ -13,19 +13,16 @@
   <body>
     <div id="main-container">
       <nav id="navbar">
-        <img
-          id="logo-abamat"
-          src="/images/abamat.jpg"
-          alt="logo abamat"
-        /><br />
+        <img id="logo-abamat" src="/images/abamat.jpg" alt="logo abamat" />
+        <ul>
+          <li id="inicio">ABAMAT Abastecedora de materiales</li>
+        </ul>
         <ul>
           <li>
             <button id="menu-sidebar"><i class="fa-solid fa-bars"></i></button>
           </li>
         </ul>
       </nav>
-
-      <h2 id="inicio">ABAMAT / Abastecedora de materiales / 961 1465823</h2>
 
       <div id="app-sidebar">
         <ul>
@@ -48,9 +45,7 @@
               </button>
             </li>
             <li>
-              <button class="tab" data-content="#the-team">
-                Acero
-              </button>
+              <button class="tab" data-content="#the-team">Acero</button>
             </li>
             <li>
               <button class="tab" data-content="#others-say">Ferretería</button>
@@ -59,58 +54,66 @@
           <div class="borders-tab"></div>
         </div>
         <p id="about-us" class="tab-content show">
-          Cemento Gris CPC30R envase de 50 kg, Cemento Blanco, Cemento resistente a sulfatos, Cemento rojizo fuerte más.
+          Cemento Gris CPC30R envase de 50 kg, Cemento Blanco, Cemento
+          resistente a sulfatos, Cemento rojizo fuerte más.
         </p>
         <p id="the-team" class="tab-content">
-          Varilla corrugada diferentes medidas, alambrón, alambre recocido, clavos, mallas electrosoldadas, armex.
+          Varilla corrugada diferentes medidas, alambrón, alambre recocido,
+          clavos, mallas electrosoldadas, armex.
         </p>
-        <p id="others-say" class="tab-content">Productos ferreteros, material eléctrico, plomería.</p>
+        <p id="others-say" class="tab-content">
+          Productos ferreteros, material eléctrico, plomería.
+        </p>
       </div>
 
       <h3 id="cotizador-header">Cotizador</h3>
       <form id="cotizador-form">
+        <div id="left-form">
           <input type="text" id="cementogris" />
           <label for="cementogris">Bulto Cemento Gris envase 50 kg</label><br />
-  
+
           <input type="text" id="calidra" />
           <label for="calidra">Bulto Calidra envase 22.5 kg</label><br />
-  
+
           <input type="text" id="var3" />
           <label for="var3">pz Varilla corrugada 3/8"</label><br />
-  
+
           <input type="text" id="var4" />
           <label for="var4">pz Varilla corrugada 1/2"</label><br />
-  
+
           <input type="text" id="alambron" />
           <label for="alambron">kg Alambrón</label><br />
-  
+
           <input type="text" id="recocido" />
           <label for="recocido">kg Alambre Recocido</label><br />
 
           <input type="text" id="clavo2" />
           <label for="clavo2">kg Clavo Estándar 2-1/2"</label><br />
-  
+
           <input type="text" id="clavo4" />
           <label for="clavo4">kg Clavo Estándar 4"</label><br />
-  
+
           <input type="text" id="armex1520" />
           <label for="armex1520">pz Armex 15x20</label><br />
-  
+
           <input type="text" id="armex1515" />
           <label for="armex1515">pz Armex 15x15</label><br />
-  
+
           <input type="text" id="malla10" />
-          <label for="malla10">rollo Malla para piso 661010</label
-          ><br />
-  
+          <label for="malla10">rollo Malla para piso 661010</label><br />
+
           <input type="text" id="malla4" />
-          <label for="malla4">rollo Malla para losa 6644</label
-          ><br />
-        
-        <div class="bottom-form">
-          <button type="submit" value="Cotizar" id="cotizar-button" />Cotizar</button>
+          <label for="malla4">rollo Malla para losa 6644</label><br />
         </div>
-        
+        <div id="right-form">
+          <img src="./images/cemento.jpg" alt="cemento" />
+        </div>
+
+        <div class="bottom-form">
+          <button type="submit" value="Cotizar" id="cotizar-button">
+            Cotizar
+          </button>
+        </div>
       </form>
 
       <h4>Total:</h4>
@@ -168,7 +171,12 @@
       <div class="modal hidden">
         <button class="close-modal">&times;</button>
         <h1>I am a modal window</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem id repudiandae, magni architecto dolorem labore nulla laboriosam est, quos consequatur voluptates necessitatibus adipisci ullam impedit odit sint, cupiditate suscipit. Expedita?</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Exercitationem id repudiandae, magni architecto dolorem labore nulla
+          laboriosam est, quos consequatur voluptates necessitatibus adipisci
+          ullam impedit odit sint, cupiditate suscipit. Expedita?
+        </p>
       </div>
       <div class="overlay hidden"></div>
 
@@ -181,9 +189,9 @@
 
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.2454712818803!2d-93.18656162483394!3d16.764458620451457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ecdbdc0dcc07c5%3A0x2687ef06bbee9318!2sAbamat%20-Abastesedora%20de%20Materiales!5e0!3m2!1ses!2smx!4v1691701633925!5m2!1ses!2smx"
-          width="300"
-          height="300"
-          style="border: 0"
+          width="250"
+          height="250"
+          style="border: 1"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
