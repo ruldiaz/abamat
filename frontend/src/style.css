@@ -194,8 +194,8 @@ button#menu-sidebar {
 
 #app-sidebar {
   position: fixed;
-  top: 15%;
-  right: 0%;
+  top: 0;
+  right: 0;
   bottom: 0;
   background-color: #ececec;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
