@@ -22,7 +22,7 @@ formRegister.addEventListener('submit', async (event) => {
   };
   try {
     const response = await axios.post(
-      'http://localhost:3001/abamat/users/register',
+      'https://abamat-backend.onrender.com/abamat/users/register',
       userData
     );
     console.log('Response', response.data);
@@ -52,7 +52,7 @@ formLogin.addEventListener('submit', async (event) => {
   };
   try {
     const response = await axios.post(
-      'http://localhost:3001/abamat/users/login',
+      'https://abamat-backend.onrender.com/abamat/users/login',
       userData
     );
     console.log('Response', response.data);
