@@ -57,7 +57,19 @@ formLogin.addEventListener('submit', async (event) => {
     );
     console.log('Response', response.data);
     if (response.data) {
-      messageRegister.insertAdjacentHTML(
+      localStorage.setItem('username', usernameLogin.value);
+      localStorage.setItem('token', response.data.token);
+      document.querySelector('.form-register').classList.add('hidden');
+      document.querySelector('.form-login').classList.add('hidden');
+      document.querySelector('#register').classList.add('hidden');
+      document.querySelector('#login').classList.add('hidden');
+      document
+        .querySelector('#navbar')
+        .insertAdjacentHTML(
+          'beforeend',
+          `<li>Bienvenido ${usernameLogin.value.toUpperCase()} !</li>`
+        );
+      messageLogin.insertAdjacentHTML(
         'beforeend',
         `<p>Usuario loggeado correctamente.</p>`
       );
