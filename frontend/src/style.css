@@ -208,6 +208,13 @@ button#menu-sidebar {
   display: block;
 }
 
+#form-register,
+#form-login {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 500px;
+}
+
 #app-sidebar {
   position: fixed;
   top: 15%;

@@ -6,6 +6,67 @@ darkModeBtn.addEventListener('click', () => {
   document.documentElement.classList.toggle('dark');
 });
 
+// form register
+const formRegister = document.querySelector('#form-register');
+const username = document.querySelector('#username');
+const password = document.querySelector('#password');
+const messageRegister = document.querySelector('.form-register');
+
+formRegister.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  console.log(username.value, password.value);
+  const userData = {
+    username: username.value,
+    password: password.value,
+    admin: 'false',
+  };
+  try {
+    const response = await axios.post(
+      'http://localhost:3001/abamat/users/register',
+      userData
+    );
+    console.log('Response', response.data);
+    if (response.data) {
+      messageRegister.insertAdjacentHTML(
+        'beforeend',
+        `<p>Usuario registrado correctamente.</p>`
+      );
+    }
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+// form login
+const formLogin = document.querySelector('#form-login');
+const usernameLogin = document.querySelector('#usernameLogin');
+const passwordLogin = document.querySelector('#passwordLogin');
+const messageLogin = document.querySelector('.form-login');
+
+formLogin.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  console.log(usernameLogin.value, passwordLogin.value);
+  const userData = {
+    username: usernameLogin.value,
+    password: passwordLogin.value,
+  };
+  try {
+    const response = await axios.post(
+      'http://localhost:3001/abamat/users/login',
+      userData
+    );
+    console.log('Response', response.data);
+    if (response.data) {
+      messageRegister.insertAdjacentHTML(
+        'beforeend',
+        `<p>Usuario loggeado correctamente.</p>`
+      );
+    }
+  } catch (error) {
+    console.error(error);
+  }
+});
+
 // sidebar
 const menuSidebar = document.querySelector('#menu-sidebar');
 
@@ -109,7 +170,7 @@ formularioCotizador.addEventListener('submit', (event) => {
   const malla4 = document.querySelector('#malla4').value || 0;
 
   const total = [
-    cementoGris * 235 +
+    cementoGris * 245 +
       calidra * 95 +
       var3 * 151 +
       var4 * 288 +
