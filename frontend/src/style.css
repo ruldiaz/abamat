@@ -358,3 +358,14 @@ input.success {
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 480px) {
+  #navbar {
+    flex-direction: column;
+  }
+
+  #navbar ul {
+    padding: 5px 0px;
+    margin: 0px 0px;
+  }
+}

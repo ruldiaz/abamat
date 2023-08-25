@@ -65,6 +65,8 @@ formRegister.addEventListener('submit', async (event) => {
         'beforeend',
         `<p>Usuario registrado correctamente.</p>`
       );
+      username.value = '';
+      password.value = '';
     }
   } catch (error) {
     console.error(error);
