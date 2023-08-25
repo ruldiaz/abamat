@@ -310,9 +310,8 @@ input.success {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
-
   background-color: white;
-  padding: 6rem;
+  padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
@@ -344,7 +343,7 @@ input.success {
 .close-modal {
   position: absolute;
   top: 0.5rem;
-  right: 2rem;
+  right: 1rem;
   font-size: 2rem;
   color: #333;
   cursor: pointer;
