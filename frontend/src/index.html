@@ -18,10 +18,13 @@
           <li id="inicio">ABAMAT Abastecedora de materiales</li>
         </ul>
         <ul id="register">
-          <li>Registro</li>
+          <li><a class="registro-btn">Registro</a></li>
         </ul>
         <ul id="login">
-          <li>Ingresar</li>
+          <li><a class="login-btn">Ingresar</a></li>
+        </ul>
+        <ul id="cerrar-sesion" class="hidden">
+          <li><a id="cerrar-sesion-btn">Cerrar sesión</a></li>
         </ul>
         <ul>
           <li>
@@ -30,7 +33,8 @@
         </ul>
       </nav>
 
-      <div class="form-register">
+      <div class="form-register modal hidden">
+        <button class="close-modal">&times;</button>
         <p>Registro de usuario</p>
         <form id="form-register">
           <label for="username">Usuario: </label>
@@ -51,7 +55,8 @@
         </form>
       </div>
 
-      <div class="form-login">
+      <div class="form-login modal hidden">
+        <button class="close-modal">&times;</button>
         <p>Ingresar a sistema</p>
         <form id="form-login">
           <label for="usernameLogin">Usuario: </label>
@@ -209,7 +214,7 @@
 
       <h3>Modales</h3>
 
-      <button class="show-modal">Abir modal</button>
+      <button class="show-modal">Abrir modal</button>
 
       <div class="modal hidden">
         <button class="close-modal">&times;</button>

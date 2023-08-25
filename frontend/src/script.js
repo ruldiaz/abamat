@@ -1,5 +1,39 @@
 'use strict';
 
+// modal
+
+const btnOpenModal = document.querySelectorAll('.show-modal');
+const btnCloseModal = document.querySelectorAll('.close-modal');
+const overlay = document.querySelector('.overlay');
+
+const openModal = function () {
+  document.querySelector('.modal')?.classList.remove('hidden');
+  document.querySelector('.overlay')?.classList.remove('hidden');
+};
+
+const closeModal = function () {
+  document.querySelectorAll('.modal').forEach((button) => {
+    button?.classList.add('hidden');
+  });
+  document.querySelector('.overlay')?.classList.add('hidden');
+};
+
+btnOpenModal.forEach((button) => {
+  button.addEventListener('click', openModal);
+});
+
+btnCloseModal.forEach((button) => {
+  button.addEventListener('click', closeModal);
+});
+
+overlay.addEventListener('click', closeModal);
+
+document.documentElement.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
+});
+
 // toggle dark mode button
 const darkModeBtn = document.querySelector('#dark-mode-btn');
 darkModeBtn.addEventListener('click', () => {
@@ -37,6 +71,22 @@ formRegister.addEventListener('submit', async (event) => {
   }
 });
 
+// registro modal
+const openRegisterModal = document.querySelector('.registro-btn');
+
+openRegisterModal.addEventListener('click', () => {
+  document.querySelector('.form-register').classList.remove('hidden');
+  document.querySelector('.overlay').classList.remove('hidden');
+});
+
+// login modal
+const openLoginModal = document.querySelector('.login-btn');
+
+openLoginModal.addEventListener('click', () => {
+  document.querySelector('.form-login').classList.remove('hidden');
+  document.querySelector('.overlay').classList.remove('hidden');
+});
+
 // form login
 const formLogin = document.querySelector('#form-login');
 const usernameLogin = document.querySelector('#usernameLogin');
@@ -69,6 +119,8 @@ formLogin.addEventListener('submit', async (event) => {
           'beforeend',
           `<li>Bienvenido ${usernameLogin.value.toUpperCase()} !</li>`
         );
+      closeModal();
+      document.querySelector('#cerrar-sesion').classList.remove('hidden');
       messageLogin.insertAdjacentHTML(
         'beforeend',
         `<p>Usuario loggeado correctamente.</p>`
@@ -77,6 +129,14 @@ formLogin.addEventListener('submit', async (event) => {
   } catch (error) {
     console.error(error);
   }
+});
+
+// cerrar sesion btn
+const closeSessionBtn = document.querySelector('#cerrar-sesion-btn');
+closeSessionBtn.addEventListener('click', () => {
+  localStorage.removeItem('token');
+  localStorage.removeItem('username');
+  window.location.reload();
 });
 
 // sidebar
@@ -285,33 +345,5 @@ productsListAButton.addEventListener('click', async () => {
     });
   } catch (error) {
     console.error(error);
-  }
-});
-
-// modal
-
-const btnOpenModal = document.querySelector('.show-modal');
-const btnCloseModal = document.querySelector('.close-modal');
-const overlay = document.querySelector('.overlay');
-
-const openModal = function () {
-  document.querySelector('.modal')?.classList.remove('hidden');
-  document.querySelector('.overlay')?.classList.remove('hidden');
-};
-
-const closeModal = function () {
-  document.querySelector('.modal')?.classList.add('hidden');
-  document.querySelector('.overlay')?.classList.add('hidden');
-};
-
-btnOpenModal.addEventListener('click', openModal);
-
-btnCloseModal.addEventListener('click', closeModal);
-
-overlay.addEventListener('click', closeModal);
-
-document.documentElement.addEventListener('keydown', function (event) {
-  if (event.key === 'Escape') {
-    closeModal();
   }
 });
