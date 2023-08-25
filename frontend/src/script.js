@@ -1,5 +1,18 @@
 'use strict';
 
+// hiding buttons ingresar
+if (localStorage.length > 0) {
+  document.querySelector('.login-btn').classList.add('hidden');
+  document.querySelector('.registro-btn').classList.add('hidden');
+  document.querySelector('#cerrar-sesion').classList.remove('hidden');
+  document
+    .querySelector('#navbar')
+    .insertAdjacentHTML(
+      'beforeend',
+      `<li>Bienvenido ${localStorage.getItem('username').toUpperCase()} !</li>`
+    );
+}
+
 // modal
 
 const btnOpenModal = document.querySelectorAll('.show-modal');
@@ -108,7 +121,8 @@ formLogin.addEventListener('submit', async (event) => {
       userData
     );
     console.log('Response', response.data);
-    if (response.data) {
+
+    if (response.data && localStorage.length === 0) {
       localStorage.setItem('username', usernameLogin.value);
       localStorage.setItem('token', response.data.token);
       document.querySelector('.form-register').classList.add('hidden');
