@@ -1,5 +1,7 @@
 'use strict';
 
+
+
 // hiding buttons ingresar
 if (localStorage.length > 0) {
   document.querySelector('.login-btn').classList.add('hidden');
