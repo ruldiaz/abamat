@@ -262,14 +262,14 @@ formularioCotizador.addEventListener('submit', (event) => {
   const total = [
     cementoGris * 245 +
       calidra * 95 +
-      var3 * 151 +
-      var4 * 288 +
+      var3 * 140 +
+      var4 * 275 +
       alambron * 26 +
       recocido * 27 +
-      clavo2 * 46 +
-      clavo4 * 46 +
-      armex1520 * 150 +
-      armex1515 * 150 +
+      clavo2 * 37 +
+      clavo4 * 37 +
+      armex1520 * 145 +
+      armex1515 * 145 +
       malla10 * 2300 +
       malla4 * 6500,
   ];
