@@ -263,7 +263,7 @@ formularioCotizador.addEventListener('submit', (event) => {
     cementoGris * 245 +
       calidra * 95 +
       var3 * 140 +
-      var4 * 275 +
+      var4 * 285 +
       alambron * 26 +
       recocido * 27 +
       clavo2 * 37 +
