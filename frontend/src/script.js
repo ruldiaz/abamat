@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 // hiding buttons ingresar
 if (localStorage.length > 0) {
   document.querySelector('.login-btn').classList.add('hidden');
@@ -262,8 +260,8 @@ formularioCotizador.addEventListener('submit', (event) => {
   const total = [
     cementoGris * 245 +
       calidra * 95 +
-      var3 * 140 +
-      var4 * 285 +
+      var3 * 132 +
+      var4 * 235 +
       alambron * 26 +
       recocido * 27 +
       clavo2 * 37 +
