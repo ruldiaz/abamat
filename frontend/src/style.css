@@ -7,6 +7,20 @@
   font-weight: bold;
 }
 
+#carrete {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  height: 229px;
+  flex-wrap: wrap;
+}
+
+#ubicacion {
+  margin: 0 auto;
+  display: block;  
+}
+
 select {
   background-color: greenyellow;
 }
@@ -30,24 +44,7 @@ body {
   font-size: 100%;
 }
 
-table {
-  display: inline-block;
-  flex-wrap: wrap;
-  border: 1px solid gray;
-  box-shadow: 2px 2px 2px gray;
-  font-size: small;
-}
 
-table img {
-  width: 150px;
-  height: 150px;
-}
-
-table i.fa-circle-plus {
-  float: right;
-  cursor: pointer;
-  font-size: larger;
-}
 
 button {
   cursor: pointer;
@@ -57,40 +54,13 @@ button {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-#cotizador-form {
-  text-align: left;
-  margin-left: 5px;
-}
-
-#cotizador-form input {
-  width: 50px;
-  margin: 5px auto;
-}
-
-.bottom-form {
-  margin-top: 15px;
-  text-align: center;
-}
-
-#cotizador-form button {
-  background-color: greenyellow;
-  width: 65px;
-}
-
-.add {
-  cursor: pointer;
-}
-
 #logo-abamat {
   margin-top: 10px;
   margin-bottom: 10px;
   width: 80px;
 }
 
-#dark-mode-btn {
-  margin-left: 600px;
-  display: block;
-}
+
 
 #main-container {
   background-color: #e0e0e9;
@@ -159,26 +129,18 @@ a:visited {
   min-width: 400px;
 }
 
-.tab {
-  all: unset;
-}
-
-.tab-content {
-  max-width: 450px;
-  display: none;
-  margin: 0 auto;
-}
-
-.tab-content.show {
-  display: block;
-}
 
 #navbar {
+  position: fixed;
   background-color: white;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+.telefono {
+  margin-top: 150px;
 }
 
 button#menu-sidebar {
@@ -208,13 +170,7 @@ button#menu-sidebar {
   display: block;
 }
 
-#form-register,
-#form-login {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #333;
-}
+
 
 p {
   color: #333;
@@ -222,168 +178,23 @@ p {
   font-weight: 600;
 }
 
-#form-register input {
-  margin-top: 15px;
-  color: #333;
-}
-
-#form-login input {
-  margin-top: 15px;
-  color: #333;
-}
-
-#app-sidebar {
-  position: fixed;
-  top: 25%;
-  right: 0;
-  bottom: 0;
-  background-color: #ececec;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  min-width: 200px;
-  color: #2c2c2c;
-  transition: transform 220ms;
-  display: flex;
-  flex-direction: column;
-  height: 30%;
-  transform: translateX(100%);
-  z-index: 1;
-}
-
-#app-sidebar.show {
-  transform: translateX(0);
-}
-
-#app-sidebar ul {
-  list-style: none;
-  padding-left: 20px;
-  line-height: 30px;
-}
-
-#app-sidebar .end {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-#app-sidebar hr {
-  border: 0;
-  border-top: 1px solid #94868b;
-}
-
-#app-sidebar p {
-  padding-left: 20px;
-  padding-bottom: 0;
-}
-
-#app-sidebar a:hover {
-  color: orangered;
-  text-decoration: none;
-}
-
 #dark-mode-btn {
   text-align: center;
   margin: 0 auto;
 }
 
-#piezas-varilla {
-  text-align: center;
-}
 
-#seccion-piezas select,
-p {
-  display: inline-flex;
-}
 
-#piezas-varilla {
-  text-align: center;
-}
 
-#seccion-piezas select,
-p {
-  display: inline-flex;
-}
 
-input.error {
-  border-top-color: #f44336;
-  border-right-color: #f44336;
-  border-bottom-color: #f44336;
-}
 
-input.success {
-  border-top-color: #458179;
-  border-right-color: #458179;
-  border-bottom-color: #458179;
-}
 
-/* classes to make modal work */
 
-.hidden {
-  display: none;
-}
 
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  background-color: white;
-  padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-  z-index: 10;
-}
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 400%;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(3px);
-  z-index: 5;
-}
 
-.show-modal {
-  font-size: 2rem;
-  font-weight: 600;
-  padding: 1.75rem 3.5rem;
-  margin: 5rem 2rem;
-  border: none;
-  background-color: greenyellow;
-  color: #444;
-  border-radius: 10rem;
-  cursor: pointer;
-}
 
-.close-modal {
-  position: absolute;
-  top: 0.5rem;
-  right: 1rem;
-  font-size: 2rem;
-  padding: 0px 10px;
-  color: #333;
-  cursor: pointer;
-  border: none;
-  background: none;
-  background-color: greenyellow;
-}
 
-#ubicacion {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
-@media (max-width: 480px) {
-  #navbar {
-    flex-direction: column;
-  }
 
-  #navbar ul {
-    padding: 5px 0px;
-    margin: 0px 0px;
-  }
-}
+
