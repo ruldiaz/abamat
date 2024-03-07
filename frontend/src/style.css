@@ -3,22 +3,22 @@
   box-sizing: border-box;
 }
 
+#main-container {
+  margin-top: 0;
+  border: 1px solid greenyellow;
+}
+
 #inicio {
   font-weight: bold;
 }
 
 #carrete {
   display: flex;
-  justify-content: center;
-  flex-direction: row;
-  gap: 10px;
-  height: 229px;
   flex-wrap: wrap;
 }
 
 #ubicacion {
-  margin: 0 auto;
-  display: block;  
+  margin-top: 150px;
 }
 
 select {
@@ -36,15 +36,12 @@ p {
 }
 
 body {
+  margin-top: 0;
   color: #333;
   text-align: center;
-  margin: 10px;
-  padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 100%;
 }
-
-
 
 button {
   cursor: pointer;
@@ -60,21 +57,14 @@ button {
   width: 80px;
 }
 
-
-
 #main-container {
   background-color: #e0e0e9;
   max-width: 100%;
   min-width: 100%;
   text-align: center;
   margin: 0 auto;
-  border: 1px solid greenyellow;
 }
 
-html.dark {
-  background-color: rgb(94, 86, 69);
-  color: white;
-}
 
 img {
   width: 250px;
@@ -121,15 +111,6 @@ a:visited {
   border-bottom: 7px solid black;
 }
 
-.borders-tab {
-  position: absolute;
-  z-index: -1;
-  bottom: 3px;
-  border-bottom: black solid 1 px;
-  min-width: 400px;
-}
-
-
 #navbar {
   position: fixed;
   background-color: white;
@@ -143,44 +124,14 @@ a:visited {
   margin-top: 150px;
 }
 
-button#menu-sidebar {
-  position: fixed;
-  top: 18%;
-  right: 8.2%;
-  width: 35px;
-  text-align: center;
-  align-items: center;
-}
-
 #navbar li {
   display: inline-block;
 }
-
-.container {
-  max-width: 800px;
-  margin: 0px auto;
-  padding: 0 20px;
-}
-
-.nav-item a {
-  text-align: center;
-  padding: 13px 20px;
-  text-decoration: none;
-  font-weight: bold;
-  display: block;
-}
-
-
 
 p {
   color: #333;
   font-size: medium;
   font-weight: 600;
-}
-
-#dark-mode-btn {
-  text-align: center;
-  margin: 0 auto;
 }
 
 
