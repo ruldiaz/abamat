@@ -16,6 +16,7 @@ body {
   align-items: center;
   background-color: #002f6c;
   padding: 1rem 2rem;
+  position: relative; /* Para el menú móvil */
 }
 
 .navbar img {
@@ -36,6 +37,19 @@ body {
 
 .navbar .nav-links li a:hover {
   text-decoration: underline;
+}
+
+.navbar .toggle {
+  display: none; /* Ocultar por defecto */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.navbar .toggle span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
 }
 
 .hero {
@@ -102,4 +116,25 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none; /* Ocultar el menú por defecto */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Ajustar según la altura de la navbar */
+    left: 0;
+    right: 0;
+    background-color: #002f6c;
+  }
+
+  .navbar .nav-links.active {
+    display: flex; /* Mostrar el menú cuando se activa */
+  }
+
+  .navbar .toggle {
+    display: flex; /* Mostrar el botón de menú en dispositivos móviles */
+  }
 }
