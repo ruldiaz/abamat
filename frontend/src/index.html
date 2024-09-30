@@ -1,108 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Abamat es una empresa distribuidora de materiales para construcción en Tuxtla Gutiérrez, Chiapas. Ofrecemos cemento gris, varilla corrugada, alambrón, y más. ¡Contáctanos al 961 14 65823!" />
-    <title>Abamat | Abastecedora de Materiales para la Construcción | Tuxtla Gutiérrez</title>
+    <meta name="description" content="Abamat es una empresa distribuidora de materiales para construcción en Tuxtla Gutiérrez, Chiapas. Ofrecemos cemento gris, varilla corrugada, alambrón y más. ¡Contáctanos al 961 14 65823!" />
+    <title>Abamat | Materiales para Construcción | Tuxtla Gutiérrez</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="main-container">
-      <nav id="navbar">
+    <header>
+      <nav class="navbar">
         <img id="logo-abamat" src="./images/abamat.jpg" alt="logo abamat" />
-        <ul>
-          <li id="inicio">¡Cotiza con nosotros, Llámanos!</li>
+        <ul class="nav-links">
+          <li><a href="#about">Sobre Nosotros</a></li>
+          <li><a href="#products">Productos</a></li>
+          <li><a href="#contact">Contacto</a></li>
         </ul>
-        
-        <ul id="cerrar-sesion" class="hidden">
-          
-        </ul>
-  
       </nav>
-      
+    </header>
 
-      <div>
-        <div class="telefono">
-          <h1>Abamat | ¡Tu mayorista en acero y cemento!</h1>
-          <h2>Materiales para Construcción en Tuxtla Gutiérrez, Chiapas</h2>
-
-          <h3>Teléfono 961 14 65823</h3>
-          <p id="address">
-            Calle Nuevo León 210 A, Col. Plan de Ayala Sur, C.p. 29020, Tuxtla
-            Gutiérrez, Chiapas. <br />
-          </p>
-          <p id="about-us" class="tab-content show">
-            Abamat es una empresa distribuidora de materiales para construcción ubicada en Tuxtla Gutiérrez, Chiapas. Ofrecemos una amplia gama de productos, incluyendo cemento gris, varilla corrugada de diferentes medidas grado 42, alambrón, mallas electrosoldadas, y más.
-          </p>
-          
-          <div class="borders-tab"></div>
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Abamat</h1>
+          <p>Tu mayorista en acero y cemento en Tuxtla Gutiérrez, Chiapas.</p>
+          <a href="#contact" class="btn">Contáctanos</a>
         </div>
+      </section>
 
-        <br />
-        <br />
-        <div id="carrete">
-          <img src="./images/cemento.jpg" alt="Cemento Gris - Abamat">
-          <img src="./images/varilla.jpg" alt="Varilla Corrugada - Abamat">
-          <img src="./images/alambron.jpg" alt="Alambrón - Abamat">
-          <img src="./images/recocido.jpg" alt="Alambre recocido - Abamat">
+      <section id="about" class="about-us">
+        <h2>¿Quiénes Somos?</h2>
+        <p>Abamat es una empresa distribuidora de materiales para construcción con una amplia gama de productos, como cemento gris, varilla corrugada y alambrón. Nos especializamos en ofrecer productos de alta calidad a precios competitivos.</p>
+      </section>
+
+      <section id="products" class="products">
+        <h2>Productos</h2>
+        <div class="product-grid">
+          <div class="product-item">
+            <img src="./images/cemento.jpg" alt="Cemento Gris" />
+            <h3>Cemento Gris</h3>
+          </div>
+          <div class="product-item">
+            <img src="./images/varilla.jpg" alt="Varilla Corrugada" />
+            <h3>Varilla Corrugada</h3>
+          </div>
+          <div class="product-item">
+            <img src="./images/alambron.jpg" alt="Alambrón" />
+            <h3>Alambrón</h3>
+          </div>
+          <div class="product-item">
+            <img src="./images/recocido.jpg" alt="Alambre recocido" />
+            <h3>Alambre recocido</h3>
+          </div>
         </div>
+      </section>
 
-      </div>
+      <section id="contact" class="contact">
+        <h2>Contacto</h2>
+        <p>Teléfono: <a href="tel:+529611465823">961 14 65823</a></p>
+        <p>Dirección: Calle Nuevo León 210 A, Tuxtla Gutiérrez, Chiapas, C.P. 29020</p>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.2454712818803!2d-93.18656162483394!3d16.764458620451457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ecdbdc0dcc07c5%3A0x2687ef06bbee9318!2sAbamat%20-Abastesedora%20de%20Materiales!5e0!3m2!1ses!2smx!4v1691701633925!5m2!1ses!2smx"
+            width="100%" height="400" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+      </section>
+    </main>
 
-      <article id="ubicacion">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.2454712818803!2d-93.18656162483394!3d16.764458620451457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ecdbdc0dcc07c5%3A0x2687ef06bbee9318!2sAbamat%20-Abastesedora%20de%20Materiales!5e0!3m2!1ses!2smx!4v1691701633925!5m2!1ses!2smx"
-          width="1024"
-          height="480"
-          style="border: 1"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </article>
-    
-
-
-
-        <br /><br /><br />
-
-
-     
-      <footer>
-        <p>Developed by RHDF</p>
-      </footer>
-     
-      <script type="module" src="script.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-      <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "Abamat",
-          "description": "Empresa distribuidora de materiales para construcción en Tuxtla Gutiérrez, Chiapas.",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Calle Nuevo León 210 A, Col. Plan de Ayala Sur",
-            "addressLocality": "Tuxtla Gutiérrez",
-            "addressRegion": "Chiapas",
-            "postalCode": "29020",
-            "addressCountry": "MX"
-          },
-          "telephone": "+52 961 14 65823",
-          "image": "https://abamat.netlify.app/images/logo.jpg",
-          "url": "https://abamat.netlify.app",
-          "sameAs": ["https://www.facebook.com/abamat", "https://twitter.com/abamat1"]
-        }
-      </script>
-
-    </div>
+    <footer>
+      <p>© 2024 Abamat - Todos los derechos reservados</p>
+    </footer>
   </body>
-        <!-- whatsapp buton  -->
-        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-        <div class="elfsight-app-48074e81-ab0c-466f-b1cb-173b2591b3b2" data-elfsight-app-lazy></div>
 </html>
