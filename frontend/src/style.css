@@ -180,8 +180,8 @@ footer {
 }
 
 .hero {
-  background-image: url('./images/truck.jpeg'); /* Change this to the correct path of your image */
-  background-size:auto ; /* Ensures the background image covers the entire section */
+  background-image: url('./images/truck.jpg'); /* Change this to the correct path of your image */
+  background-size:contain ; /* Ensures the background image covers the entire section */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the background from repeating */
   height: 61.8vh; /* Sets the height of the section to fill the viewport */
