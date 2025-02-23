@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #002f6c;
+  background-color: #27445D;
   padding: 1rem 2rem;
   position: relative; /* Para el menú móvil */
 }
@@ -78,7 +78,7 @@ body {
 }
 
 .hero-content .btn:hover {
-  background-color: #001f4a;
+  background-color: #71BBB2;
 }
 
 .about-us, .products, .contact {
@@ -86,7 +86,7 @@ body {
 }
 
 .about-us h2, .products h2, .contact h2 {
-  color: #002f6c;
+  color: #27445D;
   margin-bottom: 20px;
 }
 
@@ -112,7 +112,7 @@ body {
 }
 
 footer {
-  background-color: #002f6c;
+  background-color: #497D74;
   color: white;
   text-align: center;
   padding: 20px;
@@ -127,7 +127,7 @@ footer {
     top: 60px; /* Ajustar según la altura de la navbar */
     left: 0;
     right: 0;
-    background-color: #002f6c;
+    background-color: #27445D;
   }
 
   .navbar .nav-links.active {
@@ -137,46 +137,6 @@ footer {
   .navbar .toggle {
     display: flex; /* Mostrar el botón de menú en dispositivos móviles */
   }
-}
-
-.insurance {
-  padding: 60px 20px;
-}
-
-.insurance h2 {
-  color: #002f6c;
-  margin-bottom: 20px;
-}
-
-.insurance p {
-  color: #333;
-  margin-bottom: 40px;
-}
-
-.insurance-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.insurance-item {
-  text-align: center;
-}
-
-.insurance-item img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.insurance-item img:hover {
-  transform: scale(1.05);
-}
-
-.insurance-item h3 {
-  margin-top: 15px;
-  color: #002f6c;
 }
 
 .hero {
