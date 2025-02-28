@@ -81,13 +81,21 @@ body {
   background-color: #71BBB2;
 }
 
-.about-us, .products, .contact {
+.about-us, .products, .contact, .guide, .redes-sociales {
   padding: 60px 20px;
 }
 
 .about-us h2, .products h2, .contact h2 {
   color: #27445D;
   margin-bottom: 20px;
+}
+
+.redes-sociales {
+  text-align: center;
+}
+
+ ul {
+  list-style-type: none;
 }
 
 .product-grid {
